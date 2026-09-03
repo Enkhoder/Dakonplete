@@ -1,6 +1,6 @@
 # Dakonplete
 
-A browser implementation of **Dakon** (Congklak mancala) with full board play, move notation import and export, undo/redo, and move-by-move replay.
+A browser implementation of **Dakon** (Indonesian/Javanese mancala) with full board play, move notation import and export, undo/redo, and move-by-move replay.
 
 Built with React 19, Vite, Zustand, Framer Motion, and Tailwind v4.
 
@@ -24,7 +24,7 @@ On Windows, `run.bat` does both steps and opens the browser.
 
 ## Board encoding
 
-The board is a 17-slot integer array. Index 0 is unused padding, cups 1–7 are P1's row, cups 8–14 are P2's row, 15 is P1's store and 16 is P2's store. The game starts with 7 seeds per cup — 98 in total, an invariant that holds across every move.
+The board is a 17-slot integer array. Index 0 is unused padding, cups 1-7 are P1's row, cups 8-14 are P2's row, 15 is P1's store and 16 is P2's store. The game starts with 7 seeds per cup — 98 in total, an invariant that holds across every move.
 
 Sowing runs counter-clockwise along `[1..7, 15, 8..14, 16]`, with each player skipping the opponent's store. Cup `i` mirrors cup `15 - i` for captures. The game ends when either row is empty, or when the two stores together hold all 98 seeds.
 
@@ -44,7 +44,7 @@ Exports pair the P1 and P2 tokens per line and append a `[ P1 | 54-19 | P2 ]` sc
 
 | Key                 | Action                                |
 |---------------------|---------------------------------------|
-| `1`–`7`             | Sow the current player's matching cup |
+| `1`-`7`             | Sow the current player's matching cup |
 | `Ctrl+Z` / `Ctrl+Y` | Undo / redo                           |
 | `←` / `→`           | Step through the replay               |
 | `Enter` / `Escape`  | Answer the capture prompt (yes / no)  |
