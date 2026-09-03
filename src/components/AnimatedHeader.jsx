@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 
 
+
 //////// CONSTANTS ////////
 
 const POOL = "!\"#$%&'()*+,-./0123456789:;<=>?@[\\]^_`{|}~¢£¥§©®°×÷π•€™∆√✓";

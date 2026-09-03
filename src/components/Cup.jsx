@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import Seed from './Seed';
 
 
+
 //////// CONSTANTS ////////
 
 const SCALE = 1.1;

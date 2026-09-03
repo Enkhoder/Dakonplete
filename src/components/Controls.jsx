@@ -1,9 +1,10 @@
 //////// IMPORTS ////////
 
-import { useState, useRef, useEffect } from 'react';
-import { PLAYER_COLORS } from '../utils/playerColors';
-import { useGameStore } from '../store/gameStore';
 import { Undo2, Redo2, RotateCcw } from 'lucide-react';
+import { PLAYER_COLORS } from '../utils/playerColors';
+import { useState, useRef, useEffect } from 'react';
+import { useGameStore } from '../store/gameStore';
+
 
 
 //////// COMPONENTS ////////
@@ -92,7 +93,7 @@ const SpeedSlider = ({ value, min, max, step, onChange }) => {
     return (
         <div
             className={
-                "w-full h-2 bg-[#ddd] border-2 border-black relative"
+                "w-full h-2 bg-[#DDD] border-2 border-black relative"
                 + " cursor-pointer my-2 shadow-[2px_2px_0_#000]"
             }
             ref={trackRef}

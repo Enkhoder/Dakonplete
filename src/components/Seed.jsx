@@ -4,6 +4,7 @@
 import { motion } from 'framer-motion';
 
 
+
 //////// COMPONENTS ////////
 
 export default function Seed({ seed, offset = { x: 0, y: 0 } }) {

@@ -1,18 +1,19 @@
 //////// IMPORTS ////////
 
-import { captureYes, captureNo } from './hooks/useDakonEngine';
-import { PLAYER_COLORS } from './utils/playerColors';
-import { useSolver } from './hooks/useSolver';
 import { HelpCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-import AnimatedHeader from './components/AnimatedHeader';
+import { captureYes, captureNo } from './hooks/useDakonEngine';
 import NotationTracker from './components/NotationTracker';
+import AnimatedHeader from './components/AnimatedHeader';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
+import { PLAYER_COLORS } from './utils/playerColors';
 import { useGameStore } from './store/gameStore';
-import HelpModal from './components/HelpModal';
-import Controls from './components/Controls';
 import GameBoard from './components/GameBoard';
+import HelpModal from './components/HelpModal';
+import { useSolver } from './hooks/useSolver';
+import Controls from './components/Controls';
 import { useEffect, useState } from 'react';
+
 
 
 //////// COMPONENTS ////////

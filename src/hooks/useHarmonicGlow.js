@@ -3,6 +3,7 @@
 import { useLayoutEffect } from 'react';
 
 
+
 //////// CONSTANTS ////////
 
 const PERIOD_MS = 1000;
@@ -14,6 +15,7 @@ const GLOW_KEYFRAMES = [
     { boxShadow: '0 0 0 4px #FBBF24' },
     { boxShadow: '0 0 0 3px transparent' },
 ];
+
 
 
 //////// HOOKS ////////

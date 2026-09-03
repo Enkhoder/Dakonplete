@@ -3,8 +3,9 @@
 import { getSeedOffsetsForCup } from '../utils/seedPhysics';
 import { useGameStore } from '../store/gameStore';
 import { LayoutGroup } from 'framer-motion';
-import Cup from './Cup';
 import Seed from './Seed';
+import Cup from './Cup';
+
 
 
 //////// COMPONENTS ////////
