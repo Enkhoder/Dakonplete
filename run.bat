@@ -1,0 +1,6 @@
+@echo off
+cd /d "%~dp0"
+echo Installing dependencies (if any are missing)...
+call npm install
+echo Running Dakonplete...
+call npm run dev -- --open
