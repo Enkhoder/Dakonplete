@@ -118,7 +118,6 @@ export const useGameStore = create((set, get) => ({
         notations: [...s.notations, s.currentTurnNotation], currentTurnNotation: ''
     })),
 
-    setNotations: (arr) => set({ notations: arr, currentTurnNotation: '' }),
     setPreviewIndex: (idx) => set({ previewIndex: idx }),
     clearPreview: () => set({ previewIndex: null }),
 

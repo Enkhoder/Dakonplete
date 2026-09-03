@@ -124,28 +124,6 @@ body {
     }
 }
 
-@keyframes toast-lifecycle {
-    0% {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-
-    15% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    85% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-12px);
-    }
-}
-
 @keyframes solver-pulse {
     0%, 100% {
         box-shadow: 0 0 0 3px #F59E0B, 0 0 12px 4px rgba(245, 158, 11, 0.55);
