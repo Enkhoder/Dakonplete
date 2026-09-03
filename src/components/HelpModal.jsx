@@ -110,8 +110,8 @@ function Anim({ id, layout, frames, pace = 800, rest = 2200 }) {
 
 //////// CONSTANTS ////////
 
-const sowL = { rows: [[0, 1, 2, 3]] };
-const sowF = [
+const SOW_LAYOUT = { rows: [[0, 1, 2, 3]] };
+const SOW_FRAMES = [
     { c: { 0: [0, 1, 2], 1: [], 2: [], 3: [] }, hand: [], label: 'Cup 1 has 3 seeds' },
     { c: { 0: [], 1: [], 2: [], 3: [] }, hand: [0, 1, 2], label: 'All seeds lifted' },
     { c: { 0: [], 1: [0], 2: [], 3: [] }, hand: [1, 2], label: 'Drop one in cup 2' },
@@ -119,8 +119,8 @@ const sowF = [
     { c: { 0: [], 1: [0], 2: [1], 3: [2] }, hand: [], label: 'All seeds distributed' },
 ];
 
-const contL = { rows: [[0, 1, 2]] };
-const contF = [
+const CONT_LAYOUT = { rows: [[0, 1, 2]] };
+const CONT_FRAMES = [
     { c: { 0: [0], 1: [1, 2], 2: [] }, hand: [], label: 'Cup 1 has 1, cup 2 has 2' },
     { c: { 0: [], 1: [1, 2], 2: [] }, hand: [0], label: 'Pick up from cup 1' },
     { c: { 0: [], 1: [0, 1, 2], 2: [] }, hand: [], label: 'Lands on non-empty cup → continue!', hl: { 1: 'yellow' } },
@@ -130,8 +130,8 @@ const contF = [
     { c: { 0: [1], 1: [2], 2: [0] }, hand: [], label: 'Turn complete' },
 ];
 
-const freeL = { rows: [['o1', 'o0'], ['p0', 'p1']], stR: 'st' };
-const freeF = [
+const FREE_LAYOUT = { rows: [['o1', 'o0'], ['p0', 'p1']], stR: 'st' };
+const FREE_FRAMES = [
     {
         c: { 'p0': [0, 1], 'p1': [2], st: [] }, hand: [],
         label: 'Cup 1 has 2 seeds',
@@ -154,8 +154,8 @@ const freeF = [
     },
 ];
 
-const capL = { rows: [['o2', 'o1', 'o0'], ['p0', 'p1', 'p2']], stR: 'st' };
-const capF = [
+const CAP_LAYOUT = { rows: [['o2', 'o1', 'o0'], ['p0', 'p1', 'p2']], stR: 'st' };
+const CAP_FRAMES = [
     {
         c: { p0: [0], p1: [], p2: [], o0: [], o1: [1, 2, 3], o2: [], st: [] },
         hand: [],
@@ -180,8 +180,8 @@ const capF = [
     },
 ];
 
-const gameOverL = { rows: [['o0', 'o1', 'o2'], ['p0', 'p1', 'p2']], stL: 'sL', stR: 'sR' };
-const gameOverF = [
+const GAME_OVER_LAYOUT = { rows: [['o0', 'o1', 'o2'], ['p0', 'p1', 'p2']], stL: 'sL', stR: 'sR' };
+const GAME_OVER_FRAMES = [
     {
         c: { p0: [], p1: [], p2: [], o0: [0, 1], o1: [2, 3], o2: [4], sL: [5], sR: [6, 7, 8] }, hand: [],
         label: 'Your side is empty → it\'s game over!',
@@ -483,7 +483,7 @@ export default function HelpModal({ onClose }) {
                                     Your own store is included, but your opponent's store is <em>always</em> skipped.
                                 </p>
                                 <div className="bg-stone-50 border-2 border-black rounded-xl p-3">
-                                    <Anim id="sow" layout={sowL} frames={sowF} />
+                                    <Anim id="sow" layout={SOW_LAYOUT} frames={SOW_FRAMES} />
                                 </div>
                             </div>
 
@@ -494,7 +494,7 @@ export default function HelpModal({ onClose }) {
                                     This creates chain reactions that can circle the board multiple times.
                                 </p>
                                 <div className="bg-stone-50 border-2 border-black rounded-xl p-3">
-                                    <Anim id="cont" layout={contL} frames={contF} />
+                                    <Anim id="cont" layout={CONT_LAYOUT} frames={CONT_FRAMES} />
                                 </div>
                             </div>
 
@@ -505,7 +505,7 @@ export default function HelpModal({ onClose }) {
                                     your <strong>non-empty</strong> cups to sow next.
                                 </p>
                                 <div className="bg-stone-50 border-2 border-black rounded-xl p-3">
-                                    <Anim id="free" layout={freeL} frames={freeF} />
+                                    <Anim id="free" layout={FREE_LAYOUT} frames={FREE_FRAMES} />
                                 </div>
                             </div>
 
@@ -517,7 +517,7 @@ export default function HelpModal({ onClose }) {
                                     opponent seeds from the mirror cup are moved into your store. You may also decline.
                                 </p>
                                 <div className="bg-stone-50 border-2 border-black rounded-xl p-3">
-                                    <Anim id="cap" layout={capL} frames={capF} />
+                                    <Anim id="cap" layout={CAP_LAYOUT} frames={CAP_FRAMES} />
                                 </div>
                             </div>
 
@@ -529,7 +529,7 @@ export default function HelpModal({ onClose }) {
                                     store, it's a draw!
                                 </p>
                                 <div className="bg-stone-50 border-2 border-black rounded-xl p-3">
-                                    <Anim id="gameOver" layout={gameOverL} frames={gameOverF} pace={3000} rest={3000} />
+                                    <Anim id="gameOver" layout={GAME_OVER_LAYOUT} frames={GAME_OVER_FRAMES} pace={3000} rest={3000} />
                                 </div>
                             </div>
                         </section>
